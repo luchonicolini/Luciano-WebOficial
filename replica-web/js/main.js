@@ -11,40 +11,144 @@ document.addEventListener('DOMContentLoaded', function () {
     // Detectar en qué página estamos para ejecutar el código correcto
     const path = window.location.pathname;
 
+    // Mapeo de tags a iconos y colores
+    const tagConfig = {
+        'Desarrollo': {
+            icon: 'fas fa-code',
+            color: 'text-accent-secondary',
+            class: 'tag-desarrollo'
+        },
+        'Diseño': {
+            icon: 'fas fa-palette',
+            color: 'text-accent-blue',
+            class: 'tag-diseno'
+        },
+        'Firebase': {
+            icon: 'fas fa-fire',
+            color: 'text-accent-green',
+            class: 'tag-firebase'
+        },
+        'SwiftUI': {
+            icon: 'fab fa-swift',
+            color: 'text-accent-purple',
+            class: 'tag-swiftui'
+        },
+        'iOS': {
+            icon: 'fab fa-apple',
+            color: 'text-accent-purple',
+            class: 'tag-swiftui'
+        },
+        'Web': {
+            icon: 'fas fa-globe',
+            color: 'text-accent-secondary',
+            class: 'tag-diseno'
+        }
+    };
+
     // Función principal para la página de inicio (index.html)
     if (path.includes('index.html') || path === '/') {
-        // Inicializar Typed.js con textos dinámicos
-        new Typed('#typed-text', {
-            strings: [
-                "Desarrollo Soluciones Digitales Modernas",
-                "Construyo Experiencias de Usuario Intuitivas",
-                "Te Ayudo a Crear tu Próxima App iOS",
-                "Mi Código Transforma Ideas en Realidad"
-            ],
-            typeSpeed: 90,
-            backSpeed: 30,
-            backDelay: 1000,
-            startDelay: 500,
-            loop: true, // Ahora el ciclo se repite
-            showCursor: true,
-            cursorChar: '|',
-        });
+        // Inicializar Lenis para el scroll suave
+        const lenis = new Lenis()
+        lenis.on('scroll', (e) => {
+            // Puedes usar esta función para sincronizar animaciones con el scroll
+        })
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+        requestAnimationFrame(raf)
+
+        // Animación de GSAP para el texto que va a ser escrito
+        const typedTextSpan = document.getElementById('typed-text');
+        const phrases = [
+            "Desarrollo Soluciones Digitales Modernas",
+            "Construyo Experiencias de Usuario Intuitivas",
+            "Te Ayudo a Crear tu Próxima App iOS",
+            "Mi Código Transforma Ideas en Realidad"
+        ];
+
+        let phraseIndex = 0;
+
+        function typePhrase() {
+            const currentPhrase = phrases[phraseIndex];
+            typedTextSpan.textContent = '';
+            let charIndex = 0;
+
+            const typing = gsap.timeline({
+                onComplete: () => {
+                    setTimeout(() => {
+                        erasePhrase();
+                    }, 1000); // Espera 1 segundo antes de borrar
+                }
+            });
+
+            typing.to({}, {
+                duration: 0.05,
+                repeat: currentPhrase.length - 1,
+                onRepeat: () => {
+                    typedTextSpan.textContent += currentPhrase[charIndex];
+                    charIndex++;
+                }
+            });
+        }
+
+        function erasePhrase() {
+            const currentPhrase = typedTextSpan.textContent;
+            let charIndex = currentPhrase.length - 1;
+
+            const erasing = gsap.timeline({
+                onComplete: () => {
+                    phraseIndex = (phraseIndex + 1) % phrases.length;
+                    setTimeout(() => {
+                        typePhrase();
+                    }, 500); // Espera 0.5 segundos antes de escribir la siguiente
+                }
+            });
+
+            erasing.to({}, {
+                duration: 0.03,
+                repeat: currentPhrase.length,
+                onRepeat: () => {
+                    typedTextSpan.textContent = currentPhrase.substring(0, charIndex);
+                    charIndex--;
+                }
+            });
+        }
+        
+        // Iniciar el efecto de escritura
+        typePhrase();
 
         // Función para renderizar los artículos en el HTML de la página de inicio
         function renderArticles(articles) {
             const container = document.getElementById('articles-container');
+            if (!container) return; // Asegurarse de que el contenedor existe
             container.innerHTML = '';
-            articles.forEach(article => {
+            articles.forEach((article, index) => {
+                const config = tagConfig[article.tag] || {
+                    icon: 'fas fa-file-alt',
+                    color: 'text-accent-primary',
+                    class: 'tag-desarrollo'
+                };
+                
+                const delay = `animate__delay-${Math.min(index + 1, 4)}s`;
+
                 const articleHTML = `
-                    <article class="article-card">
-                        <div class="article-content">
-                            <span class="article-tag">${article.tag}</span>
+                    <div class="col-lg-4 col-md-6 animate__fadeInUp ${delay}">
+                        <a href="article.html?id=${article.id}" class="article-card">
+                            <div class="article-icon-wrapper">
+                                <i class="${config.icon} article-icon ${config.color}"></i>
+                                <span class="article-tag ${config.class}">${article.tag}</span>
+                            </div>
                             <h3 class="article-title">${article.title}</h3>
-                            <p class="article-date">${article.date}</p>
+                            <p class="article-date">
+                                <i class="fas fa-calendar-alt"></i> ${article.date}
+                            </p>
                             <p class="article-excerpt">${article.excerpt}</p>
-                            <a href="article.html?id=${article.id}" class="read-more">Leer más...</a>
-                        </div>
-                    </article>
+                            <span class="read-more-btn">
+                                <i class="fas fa-arrow-right"></i> Leer más
+                            </span>
+                        </a>
+                    </div>
                 `;
                 container.innerHTML += articleHTML;
             });
@@ -61,7 +165,9 @@ document.addEventListener('DOMContentLoaded', function () {
             } catch (error) {
                 console.error('Error al cargar los artículos:', error);
                 const container = document.getElementById('articles-container');
-                container.innerHTML = '<p>Lo siento, no se pudieron cargar los artículos en este momento.</p>';
+                if (container) {
+                    container.innerHTML = '<p>Lo siento, no se pudieron cargar los artículos en este momento.</p>';
+                }
                 return [];
             }
         }
