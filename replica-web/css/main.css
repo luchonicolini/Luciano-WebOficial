@@ -1,0 +1,692 @@
+:root {
+  /* Paleta de Colores */
+  --color-background-primary: #1c1f23;
+  --color-background-secondary: #181a1f;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: rgba(255, 255, 255, 0.92);
+  --color-accent-primary: #ff6f61; /* Rojo/naranja para botones y acentos */
+  --color-accent-secondary: #4299e1; /* Azul para acentos */
+  --color-accent-green: #28a745; /* Verde para acentos */
+  --color-link-hover: #0088ff;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-hover: rgba(255, 255, 255, 0.2);
+  --color-card-bg: rgba(240, 240, 240, 0.05);
+
+  /* Espaciado y Fuentes */
+  --font-family-primary: 'Arial', sans-serif;
+}
+
+/* Estilos generales (de styles.css) */
+body {
+  background-color: var(--color-background-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-primary);
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  margin-top: 0;
+}
+
+p, a {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Animaciones */
+.animate__fadeInLeft {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: fadeInLeft 1s forwards;
+}
+
+.animate__fadeInRight {
+  opacity: 0;
+  transform: translateX(20px);
+  animation: fadeInRight 1s forwards;
+}
+
+@keyframes fadeInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Hero Section (de styles.css) */
+.hero-section {
+  padding: 8rem 0;
+  background-color: var(--color-background-primary);
+  color: var(--color-text-primary);
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  opacity: 0.8;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons .btn {
+  margin: 0 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-buttons .btn-primary {
+  background-color: var(--color-accent-primary);
+  border: none;
+}
+
+.hero-buttons .btn-primary:hover {
+  background-color: #ff3d2e;
+  transform: scale(1.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+  transform: scale(1.02);
+}
+
+/* Services Section (de styles.css) */
+.bg-secondary-background {
+  background-color: var(--color-background-secondary);
+}
+
+.services-section {
+  padding: 6rem 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: #27292D;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.card p {
+  font-size: 1rem;
+  color: var(--color-text-primary);
+}
+
+.text-primary-accent {
+  color: var(--color-accent-primary);
+}
+
+.text-accent-secondary {
+  color: var(--color-accent-secondary);
+}
+
+.text-accent-green {
+  color: var(--color-accent-green);
+}
+
+.text-white-50 {
+  color: var(--color-text-secondary) !important;
+}
+
+/* Estilos generales para la sección "Sobre Mí" (de styles.css) */
+.about-section {
+  padding: 6rem 0;
+  background-color: var(--color-background-secondary);
+  color: var(--color-text-primary);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  opacity: 0.8;
+  margin-bottom: 2rem;
+}
+
+/* Contenedor de la imagen (de styles.css) */
+.image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover {
+  transform: scale(1.02);
+}
+
+.image-container img:hover {
+  transform: scale(1.05);
+}
+
+/* Botones de llamada a la acción (de styles.css) */
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cta-buttons .btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-buttons .btn-primary {
+  background-color: var(--color-accent-primary);
+  border: none;
+}
+
+.cta-buttons .btn-primary:hover {
+  background-color: #ff3d2e;
+  transform: scale(1.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.cta-buttons .btn-outline-light {
+  border: 1px solid var(--color-text-primary);
+  color: var(--color-text-primary);
+}
+
+.cta-buttons .btn-outline-light:hover {
+  background-color: var(--color-border-hover);
+  transform: scale(1.05);
+}
+
+/* Responsive (de styles.css) */
+@media (max-width: 991px) {
+  .about-section {
+    text-align: center;
+    padding: 4rem 0;
+  }
+
+  .image-container {
+    margin-bottom: 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .cta-buttons {
+    justify-content: center;
+  }
+}
+
+/* Estilos de la barra de navegación (de navbar.css) */
+.navbar {
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand img {
+    height: 40px;
+}
+
+.navbar-nav .nav-link {
+    color: var(--color-text-primary) !important;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--color-link-hover) !important;
+    background-color: var(--color-border-hover);
+    border-radius: 5px;
+}
+
+.navbar-nav .nav-link i {
+    margin-right: 0.5rem;
+}
+
+.navbar .btn-primary {
+    background-color: var(--color-accent-primary);
+    border: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar .btn-primary:hover {
+    background-color: #ff3d2e;
+    transform: scale(1.05);
+}
+
+.navbar-scrolled {
+    background-color: #222 !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 992px) {
+    .navbar-collapse {
+      background-color: #333;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+
+    .navbar-nav {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .navbar-nav .nav-link {
+      text-align: center;
+      width: 100%;
+      padding: 0.8rem 0;
+    }
+}
+
+/* Estilos de la sección de artículos recientes (de recent-articles.css) */
+.recent-articles {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--color-background-primary);
+    color: var(--color-text-primary);
+}
+
+.articles-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.articles-header h2 {
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+.random-post-btn {
+    background-color: rgba(240, 240, 240, 0.1);
+    color: var(--color-text-primary);
+    border: 1px solid rgba(240, 240, 240, 0.75);
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.random-post-btn:hover {
+    background-color: #b02a3e;
+    transform: translateY(-2px);
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.article-card {
+    background-color: var(--color-card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border: 1px solid var(--color-border);
+}
+
+.article-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-border-hover);
+}
+
+.article-content {
+    padding: 1.5rem;
+}
+
+.article-tag {
+    display: inline-block;
+    background-color: var(--color-border);
+    color: var(--color-text-primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--color-border-hover);
+}
+
+.article-title {
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem 0;
+    color: var(--color-text-primary);
+    font-weight: 700;
+}
+
+.article-date {
+    color: rgba(240, 240, 240, 0.6);
+    font-size: 0.875rem;
+    margin: 0 0 1rem 0;
+    line-height: 1.5;
+}
+
+.article-excerpt {
+    color: rgba(240, 240, 240, 0.8);
+    margin: 0 0 1.5rem 0;
+    line-height: 1.5;
+    font-size: 1rem;
+}
+
+.read-more {
+    color: var(--color-text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    font-size: 1rem;
+}
+
+.read-more::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background: linear-gradient(to right, rgba(240, 240, 240, 0.75), rgba(240, 240, 240, 0));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.read-more:hover::after {
+    transform: scaleX(1);
+}
+
+@media (max-width: 768px) {
+    .articles-header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+    .articles-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilos de la sección de contacto (de contact-form.css) */
+.contact-section {
+    padding: 80px 0;
+    background-color: var(--color-background-primary);
+    color: var(--color-text-primary);
+  }
+
+  .contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .info-side {
+    padding: 40px;
+    animation: fadeInLeft 1s forwards;
+  }
+
+  .tag {
+    background: #0d6efd;
+    color: var(--color-text-primary);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  .info-side h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--color-text-primary);
+    font-weight: 700;
+  }
+
+  .description {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #e9ecef;
+  }
+
+  .services-list {
+    margin-top: 40px;
+  }
+
+  .service-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+
+  .service-icon {
+    font-size: 24px;
+    margin-right: 15px;
+  }
+
+  .form-container {
+    background: #2c3034;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: fadeInRight 1s forwards;
+  }
+
+  .form-container h3 {
+    color: var(--color-text-primary);
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+
+  .input-group {
+    position: relative;
+    margin-bottom: 25px;
+  }
+
+  .input-group input,
+  .input-group select,
+  .input-group textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #343a40;
+    border: 2px solid #495057;
+    border-radius: 8px;
+    font-size: 16px;
+    color: var(--color-text-primary);
+    transition: all 0.3s;
+  }
+
+  .input-group label {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    color: #adb5bd;
+    transition: all 0.3s;
+    pointer-events: none;
+  }
+
+  .input-group input:focus,
+  .input-group textarea:focus,
+  .input-group select:focus {
+    border-color: #0d6efd;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.25);
+  }
+
+  .input-group input:focus + label,
+  .input-group input:valid + label,
+  .input-group textarea:focus + label,
+  .input-group textarea:valid + label {
+    top: -10px;
+    font-size: 12px;
+    background: #2c3034;
+    padding: 0 5px;
+    color: #0d6efd;
+  }
+
+  .input-group select {
+    appearance: none;
+    padding-right: 30px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23ffffff' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background: #0d6efd;
+    color: var(--color-text-primary);
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+  }
+
+  button[type="submit"]:hover {
+    background: #0b5ed7;
+    transform: translateY(-2px);
+  }
+
+  /* Responsive (de contact-form.css) */
+  @media (max-width: 991px) {
+    .contact-wrapper {
+      grid-template-columns: 1fr;
+    }
+
+    .info-side {
+      padding: 20px;
+    }
+
+    .form-container {
+      margin-top: 2rem;
+    }
+  }
+
+  /* Animaciones (de contact-form.css) */
+  @keyframes fadeInLeft {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes fadeInRight {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate__fadeInLeft {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: fadeInLeft 1s forwards;
+  }
+
+  .animate__fadeInRight {
+    opacity: 0;
+    transform: translateX(20px);
+    animation: fadeInRight 1s forwards;
+  }
+
+  /* Efectos adicionales (de contact-form.css) */
+  .service-icon i {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+
+  .service-item:hover .service-icon i {
+    transform: scale(1.1);
+  }
+
+  /* Estilos para la página de artículos */
+  .article-page-content {
+    padding: 80px 0;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--color-text-primary);
+  }
+  .article-header {
+      margin-bottom: 40px;
+  }
+  .article-tag-single {
+      display: inline-block;
+      background-color: #0d6efd;
+      color: var(--color-text-primary);
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      margin-bottom: 10px;
+  }
+  .article-title-single {
+      font-size: 2.5rem;
+      font-weight: bold;
+      line-height: 1.2;
+  }
+  .article-date-single {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.9rem;
+  }
+  .article-body p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+  }
