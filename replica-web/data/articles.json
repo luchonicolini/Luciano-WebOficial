@@ -1,0 +1,38 @@
+[
+    {
+        "id": "1",
+        "tag": "Desarrollo",
+        "icon": "fas fa-laptop-code",
+        "title": "Introducción al Desarrollo Web",
+        "date": "5 de enero, 2025",
+        "excerpt": "Aprende los fundamentos del desarrollo web y cómo crear tu primer sitio web desde cero. Cubriremos las herramientas y tecnologías esenciales...",
+        "content": "Aprender los fundamentos del desarrollo web es el primer paso para construir una carrera emocionante en tecnología. El desarrollo web se divide en dos áreas principales: frontend y backend. El frontend se encarga de todo lo que el usuario ve y con lo que interactúa, mientras que el backend maneja la lógica del servidor y las bases de datos. Para empezar, necesitarás dominar tres tecnologías clave: HTML, CSS y JavaScript. HTML (HyperText Markup Language) estructura el contenido de la página. CSS (Cascading Style Sheets) le da estilo al contenido, controlando colores, fuentes y diseño. JavaScript añade interactividad, permitiendo que la página responda a las acciones del usuario. Juntas, estas tres tecnologías forman la base de casi cualquier sitio web moderno. Empieza creando una página simple con cada una de ellas para familiarizarte con su funcionamiento."
+    },
+    {
+        "id": "2",
+        "tag": "Diseño",
+        "icon": "fas fa-paint-brush",
+        "title": "Principios del Diseño Web Moderno",
+        "date": "2 de enero, 2025",
+        "excerpt": "Descubre los principios clave que hacen que los sitios web modernos sean tanto hermosos como funcionales. Desde teoría del color hasta tipografía...",
+        "content": "El diseño web moderno no se trata solo de hacer que un sitio se vea bonito, sino de crear una experiencia de usuario intuitiva y agradable. Un principio fundamental es la simplicidad; un diseño limpio y sin desorden ayuda al usuario a encontrar lo que busca rápidamente. El color juega un papel crucial en el estado de ánimo y la identidad de la marca. Una paleta de colores cohesiva puede hacer que un sitio se sienta profesional y unificado. La tipografía también es esencial; la elección de las fuentes y su espaciado pueden mejorar significativamente la legibilidad. Finalmente, la capacidad de respuesta (responsive design) es obligatoria hoy en día, asegurando que el sitio se vea y funcione bien en cualquier dispositivo, desde un móvil hasta un ordenador de escritorio."
+    },
+    {
+        "id": "3",
+        "tag": "Firebase",
+        "icon": "fas fa-database",
+        "title": "Integrando Firebase en tu App iOS",
+        "date": "8 de enero, 2025",
+        "excerpt": "Una guía paso a paso para conectar tu aplicación SwiftUI con Firebase para autenticación y base de datos.",
+        "content": "Firebase, la plataforma de desarrollo de aplicaciones de Google, ofrece una suite de herramientas que pueden acelerar significativamente el desarrollo de aplicaciones iOS. Para empezar, necesitarás crear un proyecto en la consola de Firebase e instalar el SDK de Firebase en tu proyecto de Xcode usando CocoaPods o Swift Package Manager. Una vez configurado, puedes utilizar servicios como Firestore para bases de datos NoSQL, Authentication para gestionar usuarios, y Cloud Storage para almacenar archivos. Por ejemplo, para la autenticación, solo necesitas importar `Firebase/Auth` e implementar unas pocas líneas de código para permitir a los usuarios registrarse o iniciar sesión con correo electrónico y contraseña. Esto te permite enfocarte en la funcionalidad principal de tu app, dejando la complejidad del backend a Firebase."
+    },
+    {
+        "id": "4",
+        "tag": "SwiftUI",
+        "icon": "fab fa-swift",
+        "title": "Cómo Usar Vistas Modales en SwiftUI",
+        "date": "15 de enero, 2025",
+        "excerpt": "Aprende a presentar vistas de forma modal para mostrar información temporal o flujos de trabajo en tus apps iOS.",
+        "content": "Las vistas modales en SwiftUI son una forma poderosa de mostrar contenido temporal que se superpone a la vista actual. Son ideales para formularios de entrada, alertas o información adicional que requiere la atención del usuario. Para presentar una vista modal, se utiliza el modificador `.sheet()`. Este modificador toma un `Binding` a un valor booleano (`@State var isShowingModal = false`) que controla si la vista se muestra o no. Cuando el valor se establece en `true`, la vista modal se presenta. Al cerrarla, el valor se vuelve a `false`. Esto proporciona una manera declarativa y limpia de gestionar las transiciones de la interfaz de usuario en tus aplicaciones SwiftUI."
+    }
+]

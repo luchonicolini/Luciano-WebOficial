@@ -1,0 +1,195 @@
+/* Estilos generales del formulario */
+.contact-section {
+    padding: 80px 0;
+    background-color: #1c1f23;
+    color: #ffffff;
+  }
+  
+  .contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .info-side {
+    padding: 40px;
+    animation: fadeInLeft 1s forwards;
+  }
+  
+  .tag {
+    background: #0d6efd;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+  
+  .info-side h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-weight: 700;
+  }
+  
+  .description {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #e9ecef;
+  }
+  
+  .services-list {
+    margin-top: 40px;
+  }
+  
+  .service-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+  
+  .service-icon {
+    font-size: 24px;
+    margin-right: 15px;
+  }
+  
+  .form-container {
+    background: #2c3034;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: fadeInRight 1s forwards;
+  }
+  
+  .form-container h3 {
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+  
+  .input-group {
+    position: relative;
+    margin-bottom: 25px;
+  }
+  
+  .input-group input,
+  .input-group select,
+  .input-group textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #343a40;
+    border: 2px solid #495057;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #ffffff;
+    transition: all 0.3s;
+  }
+  
+  .input-group label {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    color: #adb5bd;
+    transition: all 0.3s;
+    pointer-events: none;
+  }
+  
+  .input-group input:focus,
+  .input-group textarea:focus,
+  .input-group select:focus {
+    border-color: #0d6efd;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.25);
+  }
+  
+  .input-group input:focus + label,
+  .input-group input:valid + label,
+  .input-group textarea:focus + label,
+  .input-group textarea:valid + label {
+    top: -10px;
+    font-size: 12px;
+    background: #2c3034;
+    padding: 0 5px;
+    color: #0d6efd;
+  }
+  
+  .input-group select {
+    appearance: none;
+    padding-right: 30px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23ffffff' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+  }
+  
+  button[type="submit"]:hover {
+    background: #0b5ed7;
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive */
+  @media (max-width: 991px) {
+    .contact-wrapper {
+      grid-template-columns: 1fr;
+    }
+  
+    .info-side {
+      padding: 20px;
+    }
+  
+    .form-container {
+      margin-top: 2rem;
+    }
+  }
+  
+  /* Animaciones */
+  @keyframes fadeInLeft {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInRight {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .animate__fadeInLeft {
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: fadeInLeft 1s forwards;
+  }
+  
+  .animate__fadeInRight {
+    opacity: 0;
+    transform: translateX(20px);
+    animation: fadeInRight 1s forwards;
+  }
+  
+  /* Efectos adicionales */
+  .service-icon i {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .service-item:hover .service-icon i {
+    transform: scale(1.1);
+  }
