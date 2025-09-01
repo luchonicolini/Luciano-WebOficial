@@ -1,0 +1,280 @@
+/* Estilos generales */
+body {
+  background-color: #1c1f23;
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  margin-top: 0;
+}
+
+p, a {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Animaciones */
+.animate__fadeInLeft {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: fadeInLeft 1s forwards;
+}
+
+.animate__fadeInRight {
+  opacity: 0;
+  transform: translateX(20px);
+  animation: fadeInRight 1s forwards;
+}
+
+@keyframes fadeInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 8rem 0;
+  background-color: #1c1f23;
+  color: #ffffff;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  opacity: 0.8;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons .btn {
+  margin: 0 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-buttons .btn-primary {
+  background-color: #ff6f61;
+  border: none;
+}
+
+.hero-buttons .btn-primary:hover {
+  background-color: #ff3d2e;
+  transform: scale(1.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.hero-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+  transform: scale(1.02);
+}
+
+/* Services Section  #181a1f */
+.bg-secondary-background {
+  background-color: #181a1f; /* O el color que desees para ese fondo */
+}
+
+.services-section {
+  padding: 6rem 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: #27292D;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+
+
+.card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.text-primary-accent {
+  color: #ff6f61; /* El color naranja/rojo que usas en otros botones, o el que prefieras */
+}
+
+.text-accent-secondary {
+  color: #4299e1; /* Un color azul u otro que te guste */
+}
+
+.text-accent-green {
+  color: #28a745; /* Un color verde o el que prefieras */
+}
+
+.text-white-50 {
+    color: rgba(255, 255, 255, 0.92) !important;
+}
+
+
+/* Estilos generales para la sección "Sobre Mí" */
+.about-section {
+  padding: 6rem 0;
+  background-color: #181a1f; /* Fondo oscuro */
+  color: #ffffff;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  opacity: 0.8;
+  margin-bottom: 2rem;
+}
+
+/* Contenedor de la imagen */
+.image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover {
+  transform: scale(1.02);
+}
+
+.image-container img:hover {
+  transform: scale(1.05);
+}
+
+/* Botones de llamada a la acción */
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cta-buttons .btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-buttons .btn-primary {
+  background-color: #ff6f61;
+  border: none;
+}
+
+.cta-buttons .btn-primary:hover {
+  background-color: #ff3d2e;
+  transform: scale(1.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.cta-buttons .btn-outline-light {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+.cta-buttons .btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
+
+/* Animaciones */
+.animate__fadeInLeft {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: fadeInLeft 1s forwards;
+}
+
+.animate__fadeInRight {
+  opacity: 0;
+  transform: translateX(20px);
+  animation: fadeInRight 1s forwards;
+}
+
+@keyframes fadeInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .about-section {
+    text-align: center;
+    padding: 4rem 0;
+  }
+
+  .image-container {
+    margin-bottom: 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .cta-buttons {
+    justify-content: center;
+  }
+}
