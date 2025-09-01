@@ -119,40 +119,41 @@ document.addEventListener('DOMContentLoaded', function () {
         typePhrase();
 
         // Función para renderizar los artículos en el HTML de la página de inicio
-        function renderArticles(articles) {
-            const container = document.getElementById('articles-container');
-            if (!container) return; // Asegurarse de que el contenedor existe
-            container.innerHTML = '';
-            articles.forEach((article, index) => {
-                const config = tagConfig[article.tag] || {
-                    icon: 'fas fa-file-alt',
-                    color: 'text-accent-primary',
-                    class: 'tag-desarrollo'
-                };
-                
-                const delay = `animate__delay-${Math.min(index + 1, 4)}s`;
+ // REEMPLAZA tu función renderArticles existente con esta:
+function renderArticles(articles) {
+    const container = document.getElementById('articles-container');
+    if (!container) return; // Asegurarse de que el contenedor existe
+    
+    container.innerHTML = '';
+    articles.forEach((article, index) => {
+        const config = tagConfig[article.tag] || {
+            icon: 'fas fa-file-alt',
+            class: 'tag-desarrollo'
+        };
 
-                const articleHTML = `
-                    <div class="col-lg-4 col-md-6 animate__fadeInUp ${delay}">
-                        <a href="article.html?id=${article.id}" class="article-card">
-                            <div class="article-icon-wrapper">
-                                <i class="${config.icon} article-icon ${config.color}"></i>
-                                <span class="article-tag ${config.class}">${article.tag}</span>
-                            </div>
-                            <h3 class="article-title">${article.title}</h3>
-                            <p class="article-date">
-                                <i class="fas fa-calendar-alt"></i> ${article.date}
-                            </p>
-                            <p class="article-excerpt">${article.excerpt}</p>
-                            <span class="read-more-btn">
-                                <i class="fas fa-arrow-right"></i> Leer más
-                            </span>
-                        </a>
+        const articleHTML = `
+            <div class="article-card">
+                <div class="article-content">
+                    <div class="article-icon-wrapper">
+                        <div class="article-icon">
+                            <i class="${config.icon}"></i>
+                        </div>
+                        <span class="article-tag ${config.class}">${article.tag}</span>
                     </div>
-                `;
-                container.innerHTML += articleHTML;
-            });
-        }
+                    <h3 class="article-title">${article.title}</h3>
+                    <p class="article-date">
+                        <i class="fas fa-calendar-alt"></i> ${article.date}
+                    </p>
+                    <p class="article-excerpt">${article.excerpt}</p>
+                    <span class="read-more-btn">
+                        <i class="fas fa-arrow-right"></i> Leer más
+                    </span>
+                </div>
+            </div>
+        `;
+        container.innerHTML += articleHTML;
+    });
+}
 
         // Función para obtener los artículos del JSON
         async function getArticles() {
