@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/about.css">
+     <link rel="stylesheet" href="css/footer.css">
+ 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    <!-- Indicador de progreso de lectura -->
+    <div class="reading-progress" id="reading-progress"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Dev</span>
+                <span class="logo-accent">Portfolio</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html#home" class="nav-link">Inicio</a>
+                <a href="index.html#about" class="nav-link">Sobre mí</a>
+                <a href="index.html#projects" class="nav-link">Proyectos</a>
+                <a href="index.html#articles" class="nav-link active">Artículos</a>
+                <a href="index.html#contact" class="nav-link">Contacto</a>
+            </div>
+            <button class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+        <!-- Hero Section Mejorada -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>
+                    <span id="typed-text">Hola, soy Luciano Nicolini</span>
+                </h1>
+                <p>
+                    Desarrollador iOS especializado en SwiftUI, creando aplicaciones nativas que no solo funcionan perfectamente, sino que cautivan y sorprenden. Mi pasión es transformar ideas innovadoras en experiencias móviles excepcionales que conquisten el App Store.
+                </p>
+                <div class="hero-cta">
+                    <a href="#about" class="hero-btn primary">Conoce mi trabajo</a>
+                    <a href="#contact" class="hero-btn secondary">
+                        <i class="fas fa-envelope"></i>
+                        Contactar
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/app3.gif" alt="Animación de una aplicación iOS con diseño colorido">
+            </div>
+
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Sobre Mí</h2>
+                <p class="section-subtitle">
+                    Desarrollador iOS especializado en SwiftUI, creando aplicaciones modernas con experiencias de usuario excepcionales e interfaces que cautivan
+                </p>
+            </div>
+
+            <div class="about-content">
+                <!-- Profile Card -->
+                <div class="about-profile">
+                    <div class="profile-card">
+                        <div class="profile-avatar">
+                            <i class="fab fa-swift"></i>
+                        </div>
+                        <h3 class="profile-name">Luciano Nicolini</h3>
+                        <p class="profile-title">iOS Developer & SwiftUI Specialist</p>
+                        <p class="profile-description">
+                            Desarrollador iOS con pasión por crear aplicaciones nativas modernas y atractivas. 
+                            Me especializo en SwiftUI, diseño de interfaces intuitivas y arquitecturas limpias que 
+                            brindan experiencias de usuario excepcionales.
+                        </p>
+                        
+                        <div class="profile-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">3+</span>
+                                <span class="stat-label">Años iOS</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">20+</span>
+                                <span class="stat-label">Apps Creadas</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">SwiftUI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills Section -->
+                <div class="about-skills">
+                    <div class="skills-header">
+                        <h3>Mi Stack Tecnológico</h3>
+                        <p class="skills-intro">
+                            Me enfoco en tecnologías modernas para iOS, creando aplicaciones que combinan 
+                            rendimiento, elegancia y funcionalidad. Desde HackerNews client hasta aplicaciones 
+                            con interfaces complejas, cada proyecto refleja mi compromiso con la calidad y la innovación.
+                        </p>
+                    </div>
+
+                    <div class="skills-categories">
+                        <div class="skill-category">
+                            <div class="category-header">
+                                <div class="category-icon">
+                                    <i class="fab fa-swift"></i>
+                                </div>
+                                <h4 class="category-title">iOS Development</h4>
+                            </div>
+                            <p class="category-description">
+                                Desarrollo nativo iOS con las últimas tecnologías de Apple. Especializado en SwiftUI 
+                                para crear interfaces declarativas y modernas que se adaptan perfectamente a cada dispositivo.
+                            </p>
+                            <div class="skill-tags">
+                                <span class="skill-tag">SwiftUI</span>
+                                <span class="skill-tag">UIKit</span>
+                                <span class="skill-tag">Swift</span>
+                                <span class="skill-tag">Xcode</span>
+                                <span class="skill-tag">Core Data</span>
+                                <span class="skill-tag">Combine</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <div class="category-header">
+                                <div class="category-icon">
+                                    <i class="fas fa-mobile-alt"></i>
+                                </div>
+                                <h4 class="category-title">UI/UX Design</h4>
+                            </div>
+                            <p class="category-description">
+                                Diseño de interfaces modernas siguiendo las Human Interface Guidelines. 
+                                Creación de experiencias visuales atractivas con animaciones fluidas y navegación intuitiva.
+                            </p>
+                            <div class="skill-tags">
+                                <span class="skill-tag">SwiftUI Views</span>
+                                <span class="skill-tag">Animation</span>
+                                <span class="skill-tag">Responsive Design</span>
+                                <span class="skill-tag">SF Symbols</span>
+                                <span class="skill-tag">Dark Mode</span>
+                                <span class="skill-tag">Accessibility</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <div class="category-header">
+                                <div class="category-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <h4 class="category-title">Arquitectura & Patrones</h4>
+                            </div>
+                            <p class="category-description">
+                                Código limpio y arquitecturas escalables para proyectos robustos. 
+                                Implementación de patrones modernos que garantizan mantenibilidad y testabilidad.
+                            </p>
+                            <div class="skill-tags">
+                                <span class="skill-tag">MVVM</span>
+                                <span class="skill-tag">Clean Architecture</span>
+                                <span class="skill-tag">Repository Pattern</span>
+                                <span class="skill-tag">Dependency Injection</span>
+                                <span class="skill-tag">Unit Testing</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <div class="category-header">
+                                <div class="category-icon">
+                                    <i class="fas fa-cloud"></i>
+                                </div>
+                                <h4 class="category-title">Backend & Services</h4>
+                            </div>
+                            <p class="category-description">
+                                Integración con APIs y servicios en la nube. Manejo eficiente de datos remotos 
+                                y sincronización con bases de datos locales para aplicaciones robustas.
+                            </p>
+                            <div class="skill-tags">
+                                <span class="skill-tag">REST APIs</span>
+                                <span class="skill-tag">Firebase</span>
+                                <span class="skill-tag">CloudKit</span>
+                                <span class="skill-tag">URLSession</span>
+                                <span class="skill-tag">JSON</span>
+                                <span class="skill-tag">Async/Await</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <div class="category-header">
+                                <div class="category-icon">
+                                    <i class="fas fa-rocket"></i>
+                                </div>
+                                <h4 class="category-title">Proyectos Destacados</h4>
+                            </div>
+                            <p class="category-description">
+                                Aplicaciones reales que demuestran mi experiencia práctica, desde clientes de noticias 
+                                hasta aplicaciones con interfaces complejas y funcionalidades avanzadas.
+                            </p>
+                            <div class="skill-tags">
+                                <span class="skill-tag">HackerNews Client</span>
+                                <span class="skill-tag">Real-time Apps</span>
+                                <span class="skill-tag">Data Visualization</span>
+                                <span class="skill-tag">Complex UI</span>
+                                <span class="skill-tag">Performance Optimization</span>
+                                <span class="skill-tag">App Store Ready</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Timeline -->
+                <div class="experience-section">
+                    <div class="experience-header">
+                        <h3>Mi Trayectoria</h3>
+                        <p style="color: var(--text-secondary); margin-top: 0.5rem; font-size: 1.1rem;">
+                            Evolución continua en el desarrollo iOS, desde los fundamentos hasta especializarme en SwiftUI
+                        </p>
+                    </div>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <div class="timeline-year">2024 - Presente</div>
+                                <h4 class="timeline-title">iOS Developer Senior</h4>
+                                <p class="timeline-company">Freelance & Proyectos Personales</p>
+                                <p class="timeline-description">
+                                    Desarrollo de aplicaciones iOS complejas con SwiftUI, implementando 
+                                    arquitecturas MVVM y patrones modernos. Creación de HackerNews client 
+                                    y aplicaciones con interfaces avanzadas que destacan en el App Store.
+                                </p>
+                            </div>
+                            <div class="timeline-dot"></div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <div class="timeline-year">2023 - 2024</div>
+                                <h4 class="timeline-title">Transición a SwiftUI</h4>
+                                <p class="timeline-company">Especialización & Perfeccionamiento</p>
+                                <p class="timeline-description">
+                                    Migración completa a SwiftUI, dominando las últimas tecnologías 
+                                    declarativas de Apple. Enfoque en animaciones complejas, interfaces 
+                                    responsivas y optimización de rendimiento para experiencias fluidas.
+                                </p>
+                            </div>
+                            <div class="timeline-dot"></div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <div class="timeline-year">2022 - 2023</div>
+                                <h4 class="timeline-title">Fundamentos iOS</h4>
+                                <p class="timeline-company">Aprendizaje & Desarrollo de Base</p>
+                                <p class="timeline-description">
+                                    Inicio en el desarrollo iOS con UIKit y Swift, estableciendo bases sólidas 
+                                    en programación orientada a objetos, patrones MVC y principios fundamentales 
+                                    del ecosistema Apple.
+                                </p>
+                            </div>
+                            <div class="timeline-dot"></div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <div class="timeline-year">2018 - 2022</div>
+                                <h4 class="timeline-title">Exploración Tecnológica</h4>
+                                <p class="timeline-company">Descubrimiento & Pasión</p>
+                                <p class="timeline-description">
+                                    Descubrimiento del desarrollo móvil y fascinación por las posibilidades 
+                                    del ecosistema iOS. Primeros experimentos con Xcode y desarrollo de 
+                                    la pasión por crear experiencias móviles innovadoras.
+                                </p>
+                            </div>
+                            <div class="timeline-dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+             <!-- Portfolio Section -->
+                <div class="portfolio-section">
+                    <div class="portfolio-header">
+                        <h3>Portafolio de Proyectos</h3>
+                        <p style="color: var(--text-secondary); margin-top: 0.5rem; font-size: 1.1rem;">
+                            Proyectos reales que demuestran mi experiencia práctica en desarrollo iOS con SwiftUI
+                        </p>
+                    </div>
+
+                    <div class="portfolio-grid">
+                        <!-- Proyecto 1 -->
+                        <div class="portfolio-item featured">
+                            <div class="project-image">
+                                <div class="project-placeholder">
+                                    <i class="fas fa-newspaper"></i>
+                                </div>
+                                <div class="project-overlay">
+                                    <div class="project-actions">
+                                        <button class="action-btn preview-btn">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="action-btn github-btn">
+                                            <i class="fab fa-github"></i>
+                                        </button>
+                                        <button class="action-btn store-btn">
+                                            <i class="fab fa-app-store"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-badge">Proyecto Destacado</div>
+                                <h4 class="project-title">HackerNews Client</h4>
+                                <p class="project-description">
+                                    Cliente moderno para HackerNews construido completamente en SwiftUI. 
+                                    Incluye navegación intuitiva, modo oscuro, favoritos y una interfaz 
+                                    que se adapta perfectamente a todos los dispositivos iOS.
+                                </p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">SwiftUI</span>
+                                    <span class="tech-tag">MVVM</span>
+                                    <span class="tech-tag">Async/Await</span>
+                                    <span class="tech-tag">Core Data</span>
+                                </div>
+                                <div class="project-stats">
+                                    <div class="stat">
+                                        <i class="fas fa-star"></i>
+                                        <span>4.8★ rating</span>
+                                    </div>
+                                    <div class="stat">
+                                        <i class="fas fa-download"></i>
+                                        <span>1K+ downloads</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Proyecto 2 -->
+                        <div class="portfolio-item">
+                            <div class="project-image">
+                                <div class="project-placeholder">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="project-overlay">
+                                    <div class="project-actions">
+                                        <button class="action-btn preview-btn">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="action-btn github-btn">
+                                            <i class="fab fa-github"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h4 class="project-title">Weather Analytics</h4>
+                                <p class="project-description">
+                                    App de análisis meteorológico con visualizaciones interactivas 
+                                    y predicciones avanzadas usando APIs en tiempo real.
+                                </p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">SwiftUI</span>
+                                    <span class="tech-tag">Charts</span>
+                                    <span class="tech-tag">CoreLocation</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Proyecto 3 -->
+                        <div class="portfolio-item">
+                            <div class="project-image">
+                                <div class="project-placeholder">
+                                    <i class="fas fa-tasks"></i>
+                                </div>
+                                <div class="project-overlay">
+                                    <div class="project-actions">
+                                        <button class="action-btn preview-btn">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="action-btn github-btn">
+                                            <i class="fab fa-github"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h4 class="project-title">TaskMaster Pro</h4>
+                                <p class="project-description">
+                                    Gestor de tareas avanzado con sincronización en la nube, 
+                                    colaboración en equipo y análisis de productividad.
+                                </p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">SwiftUI</span>
+                                    <span class="tech-tag">CloudKit</span>
+                                    <span class="tech-tag">Combine</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Proyecto 4 -->
+                        <div class="portfolio-item">
+                            <div class="project-image">
+                                <div class="project-placeholder">
+                                    <i class="fas fa-camera"></i>
+                                </div>
+                                <div class="project-overlay">
+                                    <div class="project-actions">
+                                        <button class="action-btn preview-btn">
+                                            <i class="fas fa-eye"></i>
+                                        </button>
+                                        <button class="action-btn github-btn">
+                                            <i class="fab fa-github"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h4 class="project-title">PhotoEditor AI</h4>
+                                <p class="project-description">
+                                    Editor de fotos con inteligencia artificial integrada 
+                                    para mejoras automáticas y filtros avanzados.
+                                </p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">SwiftUI</span>
+                                    <span class="tech-tag">Core Image</span>
+                                    <span class="tech-tag">Vision</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Call to Action -->
+                    <div class="portfolio-cta">
+                        <div class="cta-content">
+                            <h4>¿Interesado en trabajar conmigo?</h4>
+                            <p>Estoy disponible para proyectos freelance y colaboraciones en desarrollo iOS</p>
+                            <div class="cta-buttons">
+                                <a href="index.html#contact" class="cta-btn primary">Contactar</a>
+                                <a href="https://github.com/tu-usuario" class="cta-btn secondary" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                    Ver GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+        <!-- Footer adaptado -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-text">Dev</span>
+                        <span class="logo-accent">Portfolio</span>
+                    </div>
+                    <p class="footer-text">
+                        Desarrollo profesional de aplicaciones iOS y web. 
+                        Creando experiencias digitales excepcionales con código limpio y diseño intuitivo.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#home">Inicio</a></li>
+                        <li><a href="index.html#about">Sobre mí</a></li>
+                        <li><a href="index.html#projects">Proyectos</a></li>
+                        <li><a href="index.html#articles">Artículos</a></li>
+                        <li><a href="index.html#contact">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Recursos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Guías SwiftUI</a></li>
+                        <li><a href="#">Proyectos Demo</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Blog Técnico</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Tecnologías</h4>
+                    <ul class="footer-links">
+                        <li>SwiftUI & UIKit</li>
+                        <li>React & JavaScript</li>
+                        <li>Firebase & Node.js</li>
+                        <li>Xcode & Git</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Portfolio Developer. Todos los derechos reservados.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos de Uso</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Reading progress indicator
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('reading-progress').style.width = scrolled + '%';
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile navigation toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        navToggle.addEventListener('click', () => {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+
+
+
+
+// Reading progress indicator
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('reading-progress').style.width = scrolled + '%';
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Portfolio interactions
+        document.querySelectorAll('.action-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                if (this.classList.contains('preview-btn')) {
+                    // Simulación de vista previa
+                    alert('Vista previa del proyecto (aquí iría el modal o página de detalles)');
+                } else if (this.classList.contains('github-btn')) {
+                    // Aquí irían tus enlaces reales de GitHub
+                    alert('Enlace a GitHub del proyecto');
+                } else if (this.classList.contains('store-btn')) {
+                    // Aquí irían tus enlaces al App Store
+                    alert('Enlace al App Store');
+                }
+            });
+        });
+
+        // Animación de aparición para elementos del portafolio
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Aplicar animación a los elementos del portafolio
+        document.querySelectorAll('.portfolio-item').forEach((item, index) => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(30px)';
+            item.style.transition = `all 0.6s ease ${index * 0.1}s`;
+            observer.observe(item);
+        });
+
+    </script>
+</body>
+</html>

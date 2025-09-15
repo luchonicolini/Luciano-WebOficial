@@ -1,0 +1,317 @@
+:root {
+    /* ===== SISTEMA DE COLORES ===== */
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --accent-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --success-gradient: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    --warning-gradient: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    --dark-gradient: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 100%);
+    --card-gradient: linear-gradient(145deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    
+    /* Colores de fondo */
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #0f0f16;
+    --bg-tertiary: #14141d;
+    --bg-quaternary: #191924;
+    --bg-accent: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+    --bg-card: rgba(255, 255, 255, 0.05);
+    --bg-card-hover: rgba(255, 255, 255, 0.08);
+    --bg-overlay: rgba(0, 0, 0, 0.8);
+    
+    /* Colores de acento */
+    --accent-blue: #3b82f6;
+    --accent-purple: #8b5cf6;
+    --accent-pink: #ec4899;
+    --accent-green: #10b981;
+    --accent-orange: #f59e0b;
+    
+    /* Colores de texto */
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.8);
+    --text-muted: rgba(255, 255, 255, 0.6);
+    --text-accent: #3b82f6;
+    
+    /* Bordes */
+    --border-primary: rgba(255, 255, 255, 0.1);
+    --border-secondary: rgba(255, 255, 255, 0.2);
+    --border-accent: rgba(59, 130, 246, 0.3);
+    --border-separator: rgba(255, 255, 255, 0.05);
+    
+    /* Efectos de sombra */
+    --shadow-glow: 0 0 40px rgba(59, 130, 246, 0.15);
+    --shadow-glow-hover: 0 0 60px rgba(59, 130, 246, 0.25);
+    
+    /* Transiciones */
+    --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== RESET BÁSICO ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== FONDO PRINCIPAL CON EFECTOS VISUALES ===== */
+body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    min-height: 100vh;
+    position: relative;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Capa de partículas animadas */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, rgba(59, 130, 246, 0.15), transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(139, 92, 246, 0.15), transparent),
+        radial-gradient(1px 1px at 90px 40px, rgba(236, 72, 153, 0.15), transparent),
+        radial-gradient(1px 1px at 130px 80px, rgba(16, 185, 129, 0.15), transparent),
+        radial-gradient(2px 2px at 160px 30px, rgba(245, 158, 11, 0.15), transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: globalParticlesFloat 25s linear infinite;
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Capa de orbes de fondo */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(600px circle at 20% 30%, rgba(59, 130, 246, 0.1), transparent),
+        radial-gradient(400px circle at 80% 20%, rgba(139, 92, 246, 0.08), transparent),
+        radial-gradient(500px circle at 60% 70%, rgba(236, 72, 153, 0.06), transparent),
+        radial-gradient(350px circle at 10% 80%, rgba(16, 185, 129, 0.07), transparent);
+    animation: globalOrbsFloat 30s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Animaciones de las partículas */
+@keyframes globalParticlesFloat {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-100px, -50px); }
+}
+
+@keyframes globalOrbsFloat {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.6;
+    }
+}
+
+/* Asegurar que el contenido esté por encima de los efectos */
+main, .content {
+    position: relative;
+    z-index: 2;
+}
+
+/* ===== CLASES UTILITARIAS PARA FONDOS ===== */
+.bg-card {
+    background: var(--bg-card);
+    backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid var(--border-primary);
+}
+
+.bg-card:hover {
+    background: var(--bg-card-hover);
+}
+
+.bg-gradient-primary {
+    background: var(--primary-gradient);
+}
+
+.bg-gradient-accent {
+    background: var(--accent-gradient);
+}
+
+.bg-gradient-card {
+    background: var(--card-gradient);
+}
+
+.text-gradient {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ===== EFECTOS ADICIONALES PARA SECCIONES ===== */
+.section-with-particles {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-with-particles::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(1px 1px at 25px 35px, rgba(59, 130, 246, 0.08), transparent),
+        radial-gradient(1px 1px at 85px 75px, rgba(139, 92, 246, 0.06), transparent),
+        radial-gradient(1px 1px at 120px 45px, rgba(236, 72, 153, 0.05), transparent);
+    background-repeat: repeat;
+    background-size: 150px 80px;
+    animation: sectionParticlesFloat 35s linear infinite;
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.section-with-particles::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(400px circle at 15% 25%, rgba(59, 130, 246, 0.03), transparent),
+        radial-gradient(300px circle at 85% 75%, rgba(139, 92, 246, 0.02), transparent),
+        radial-gradient(350px circle at 60% 40%, rgba(16, 185, 129, 0.025), transparent);
+    animation: sectionOrbsFloat 40s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes sectionParticlesFloat {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    100% { transform: translate(-75px, -40px) rotate(30deg); }
+}
+
+@keyframes sectionOrbsFloat {
+    0%, 100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.05) rotate(45deg);
+        opacity: 0.8;
+    }
+}
+
+/* ===== SCROLLBAR PERSONALIZADA ===== */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-gradient);
+    border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+}
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-blue) var(--bg-secondary);
+}
+
+/* ===== RESPONSIVE ADAPTATIONS ===== */
+@media (max-width: 768px) {
+    body::before {
+        background-size: 120px 60px;
+        animation-duration: 30s;
+    }
+    
+    body::after {
+        background: 
+            radial-gradient(400px circle at 20% 30%, rgba(59, 130, 246, 0.08), transparent),
+            radial-gradient(300px circle at 80% 20%, rgba(139, 92, 246, 0.06), transparent),
+            radial-gradient(350px circle at 60% 70%, rgba(236, 72, 153, 0.04), transparent);
+    }
+}
+
+@media (max-width: 480px) {
+    body::before {
+        background-size: 100px 50px;
+        opacity: 0.2;
+        animation: globalParticlesFloat 60s linear infinite;
+    }
+    
+    body::after {
+        background: 
+            radial-gradient(250px circle at 20% 30%, rgba(59, 130, 246, 0.05), transparent),
+            radial-gradient(200px circle at 80% 20%, rgba(139, 92, 246, 0.04), transparent),
+            radial-gradient(220px circle at 60% 70%, rgba(236, 72, 153, 0.03), transparent);
+        animation: globalOrbsFloat 80s ease-in-out infinite; 
+    }
+}
+
+/* ===== ACCESIBILIDAD ===== */
+@media (prefers-reduced-motion: reduce) {
+    body::before,
+    body::after,
+    .section-with-particles::before,
+    .section-with-particles::after {
+        animation: none !important;
+    }
+}
+
+/* ===== MODO CLARO (OPCIONAL) ===== */
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg-primary: #ffffff;
+        --bg-secondary: #f8fafc;
+        --bg-tertiary: #f1f5f9;
+        --bg-card: rgba(0, 0, 0, 0.05);
+        --bg-card-hover: rgba(0, 0, 0, 0.08);
+        
+        --text-primary: #1e293b;
+        --text-secondary: rgba(30, 41, 59, 0.8);
+        --text-muted: rgba(30, 41, 59, 0.6);
+        
+        --border-primary: rgba(0, 0, 0, 0.1);
+        --border-secondary: rgba(0, 0, 0, 0.2);
+    }
+    
+    body::before {
+        background-image: 
+            radial-gradient(2px 2px at 20px 30px, rgba(59, 130, 246, 0.08), transparent),
+            radial-gradient(2px 2px at 40px 70px, rgba(139, 92, 246, 0.08), transparent),
+            radial-gradient(1px 1px at 90px 40px, rgba(236, 72, 153, 0.08), transparent),
+            radial-gradient(1px 1px at 130px 80px, rgba(16, 185, 129, 0.08), transparent),
+            radial-gradient(2px 2px at 160px 30px, rgba(245, 158, 11, 0.08), transparent);
+    }
+    
+    body::after {
+        background: 
+            radial-gradient(600px circle at 20% 30%, rgba(59, 130, 246, 0.05), transparent),
+            radial-gradient(400px circle at 80% 20%, rgba(139, 92, 246, 0.04), transparent),
+            radial-gradient(500px circle at 60% 70%, rgba(236, 72, 153, 0.03), transparent),
+            radial-gradient(350px circle at 10% 80%, rgba(16, 185, 129, 0.035), transparent);
+    }
+}
+
+
+
+

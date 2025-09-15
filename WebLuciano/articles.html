@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artículo | Portfolio - Desarrollador iOS & Web</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Highlight.js CSS - Tema GitHub Dark -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    
+    <!-- Estilos principales -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/articles.css">
+    
+</head>
+<body>
+    <!-- Indicador de progreso de lectura -->
+    <div class="reading-progress" id="reading-progress"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Dev</span>
+                <span class="logo-accent">Portfolio</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html#home" class="nav-link">Inicio</a>
+                <a href="index.html#about" class="nav-link">Sobre mí</a>
+                <a href="index.html#projects" class="nav-link">Proyectos</a>
+                <a href="index.html#articles" class="nav-link active">Artículos</a>
+                <a href="index.html#contact" class="nav-link">Contacto</a>
+            </div>
+            <button class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Contenido principal del artículo -->
+    <main class="article-page">
+        <div class="article-container">
+            <!-- Navegación de vuelta -->
+            <div class="back-navigation">
+                <a href="index.html#articles" class="back-btn">
+                    <i class="fas fa-arrow-left"></i>
+                    Volver a artículos
+                </a>
+            </div>
+
+            <!-- Header del artículo -->
+            <header class="article-header">
+                <div class="article-tag">
+                    <i class="fas fa-code"></i>
+                    Cargando...
+                </div>
+                <h1 class="article-title">
+                    Cargando artículo...
+                </h1>
+                <div class="article-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span id="article-date">Fecha</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-clock"></i>
+                        <span id="reading-time">5 min lectura</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-user"></i>
+                        <span>Portfolio Developer</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Contenido del artículo -->
+            <article class="article-content">
+                <div id="article-content">
+                    <!-- El contenido se cargará aquí dinámicamente -->
+                    <p>Cargando contenido del artículo...</p>
+                </div>
+
+                <!-- Acciones del artículo -->
+                <div class="article-actions">
+                    <a href="#" class="action-btn" onclick="shareArticle()">
+                        <i class="fas fa-share"></i>
+                        Compartir
+                    </a>
+                    <a href="index.html#contact" class="action-btn">
+                        <i class="fas fa-envelope"></i>
+                        Contactar
+                    </a>
+                    <a href="index.html#articles" class="action-btn">
+                        <i class="fas fa-list"></i>
+                        Más artículos
+                    </a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer adaptado -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <span class="logo-text">Dev</span>
+                        <span class="logo-accent">Portfolio</span>
+                    </div>
+                    <p class="footer-text">
+                        Desarrollo profesional de aplicaciones iOS y web. 
+                        Creando experiencias digitales excepcionales con código limpio y diseño intuitivo.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#home">Inicio</a></li>
+                        <li><a href="index.html#about">Sobre mí</a></li>
+                        <li><a href="index.html#projects">Proyectos</a></li>
+                        <li><a href="index.html#articles">Artículos</a></li>
+                        <li><a href="index.html#contact">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Recursos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Guías SwiftUI</a></li>
+                        <li><a href="#">Proyectos Demo</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Blog Técnico</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Tecnologías</h4>
+                    <ul class="footer-links">
+                        <li>SwiftUI & UIKit</li>
+                        <li>React & JavaScript</li>
+                        <li>Firebase & Node.js</li>
+                        <li>Xcode & Git</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Portfolio Developer. Todos los derechos reservados.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos de Uso</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/articles.js"></script>
+
+</body>
+</html>
